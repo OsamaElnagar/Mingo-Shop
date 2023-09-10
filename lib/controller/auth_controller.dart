@@ -35,7 +35,7 @@ class AuthController extends GetxController {
           user.value = userFromJson(userResult.body);
           await _localAuthService.addToken(token: token);
           await _localAuthService.addUser(user: user.value!);
-          EasyLoading.showSuccess("Welcome to MyGrocery!");
+          EasyLoading.showSuccess("Welcome to Mingo Shop!");
           Navigator.of(Get.overlayContext!).pop();
         } else {
           EasyLoading.showError('Something wrong. Try again!');
@@ -68,7 +68,7 @@ class AuthController extends GetxController {
           await _localAuthService.addToken(token: token);
           await _localAuthService.addUser(user: user.value!);
           user.value =_localAuthService.getUser();
-          EasyLoading.showSuccess("Welcome to MyGrocery!");
+          EasyLoading.showSuccess("Welcome to Mingo Shop!");
           Navigator.of(Get.overlayContext!).pop();
         } else {
           EasyLoading.showError('Something wrong. Try again!');
